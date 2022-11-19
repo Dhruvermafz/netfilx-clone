@@ -2,8 +2,29 @@ import './Nav.css'
 import {useState, useEffect} from 'react';
 
 const Nav = () =>{
+
+  const [show, setShow] = useState(false);
+
+  const scrollHandler = () =>{
+    if(window.scrollY > 10){
+      setShow(true);
+    }else{
+           setShow(false); 
+    }
+  }
+
+  useEffect(() =>{
+         window.addEventListener('scroll', scrollHandler);
+
+         return () =>{
+             window.removeEventListener('scroll', scrollHandler);
+         }
+  }, []);
   
-    return <nav>
+    return (
+    <nav style={{
+      backgroundColor: show ? 'rgb(20,20,20)' : 'transparent'
+    }}>
         <section>
             <div className="nav_left">
                    <img src="https://1000logos.net/wp-content/uploads/2017/05/Netflix-Logo.png" 
@@ -55,7 +76,7 @@ const Nav = () =>{
           />
             </div>
         </section>
-    </nav>
+    </nav>)
 }
 
 export default Nav
