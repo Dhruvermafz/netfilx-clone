@@ -1,0 +1,15 @@
+@import url(//db.onlinewebfonts.com/c/0d5f8cc3c1312e1f7c94b4ccf48733c0?family=Netflix+Sans+Icon);
+body {
+  font-family: "Netflix Sans";
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
